@@ -43,31 +43,34 @@ This repository provides a Dockerized version of the "Secured Babak RAG App," en
 
 ## Running the App
 
-1. **Pull the Docker Image**:
+Ensure you have the Google Cloud service account key file (.json format) that you downloaded in the previous step.
 
-   Replace `<YOUR_GITHUB_USERNAME>` with your GitHub username:
+### On Unix-based Systems (Linux/macOS)
 
-   ```bash
-   docker pull ghcr.io/<YOUR_GITHUB_USERNAME>/secured-babak-rag-app:latest
-   ```
+Run the Docker container using the following command, replacing `/path/to/your/service_account.json` with the actual path to your credentials file:
 
-2. **Run the Docker Container**:
+```bash
+docker run -p 8501:8501     -e GOOGLE_APPLICATION_CREDENTIALS=/app/service_account.json     -v /path/to/your/service_account.json:/app/service_account.json     ghcr.io/babak01/vertex-ai-llm-comparator-docker:latest
+```
 
-   Replace `/path/to/your/service_account.json` with the actual path to your service account key file:
+### On Windows PowerShell
 
-   ```bash
-   docker run -p 8501:8501        -e GOOGLE_APPLICATION_CREDENTIALS=/app/service_account.json        -v /path/to/your/service_account.json:/app/service_account.json        ghcr.io/<YOUR_GITHUB_USERNAME>/secured-babak-rag-app:latest
-   ```
+Use the following command with backticks (`) for line continuation:
 
-   This command maps the service account key into the container and sets the necessary environment variable for authentication.
+```powershell
+docker run -p 8501:8501 `
+    -e GOOGLE_APPLICATION_CREDENTIALS=/app/service_account.json `
+    -v C:\path	o\your\service_account.json:/app/service_account.json `
+    ghcr.io/babak01/vertex-ai-llm-comparator-docker:latest
+```
 
-3. **Access the App**:
+### Command Explanation:
 
-   Once the container is running, open your browser and navigate to:
+- Exposes the Streamlit app on port `8501`.
+- Sets the `GOOGLE_APPLICATION_CREDENTIALS` environment variable within the container.
+- Mounts your service account JSON file into the container at `/app/service_account.json`.
 
-   ```plaintext
-   http://localhost:8501
-   ```
+Open your browser and go to `http://localhost:8501` to access the app.
 
 ## Uploading Files and Asking Questions
 
@@ -77,7 +80,6 @@ This repository provides a Dockerized version of the "Secured Babak RAG App," en
 
 ## Repository Structure
 
-- **Dockerfile**: Instructions to build the Docker image.
 - **README.md**: This documentation file.
 - **LICENSE**: License information for the project.
 
@@ -85,7 +87,25 @@ This repository provides a Dockerized version of the "Secured Babak RAG App," en
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project contains code from Google LLC, originally licensed under the Apache License, Version 2.0. The modified version provided here also falls under the Apache License 2.0.
+
+You may obtain a copy of the Apache 2.0 License at: [https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+### Apache License 2.0 Notice:
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+[https://www.apache.org/licenses/LICENSE-2.0](https://www.apache.org/licenses/LICENSE-2.0)
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+For more information on licensing or usage, please see the LICENSE file included with this repository.
 
 ## Contact
 
