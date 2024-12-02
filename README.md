@@ -63,7 +63,7 @@ Use the following command with backticks (`) for line continuation:
 ```powershell
 docker run -p 8501:8501 `
     -e GOOGLE_APPLICATION_CREDENTIALS=/app/service_account.json `
-    -v C:\path	o\your\service_account.json:/app/service_account.json `
+    -v C:/path/to/your/service_account.json:/app/service_account.json `
     ghcr.io/babak01/secured-babak-rag-app:latest
 ```
 
