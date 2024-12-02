@@ -21,7 +21,7 @@ This repository provides the Dockerized version of the "Secured Babak RAG App". 
 To use the app, pull the pre-built Docker image from Docker Hub:
 
 ```bash
-docker pull username/secured-babak-rag-app:latest
+docker pull babak02/secured-babak-rag-app:latest
 ```
 
 ### 2. Run the Docker Container
@@ -29,7 +29,7 @@ docker pull username/secured-babak-rag-app:latest
 Run the Docker container with the following command:
 
 ```bash
-docker run -p 8501:8501 username/secured-babak-rag-app:latest
+docker run -p 8501:8501 babak02/secured-babak-rag-app:latest
 ```
 
 This will start the app on your local machine.
