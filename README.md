@@ -50,7 +50,10 @@ Ensure you have the Google Cloud service account key file (.json format) that yo
 Run the Docker container using the following command, replacing `/path/to/your/service_account.json` with the actual path to your credentials file:
 
 ```bash
-docker run -p 8501:8501     -e GOOGLE_APPLICATION_CREDENTIALS=/app/service_account.json     -v /path/to/your/service_account.json:/app/service_account.json     ghcr.io/babak01/vertex-ai-llm-comparator-docker:latest
+docker run -p 8501:8501     
+   -e GOOGLE_APPLICATION_CREDENTIALS=/app/service_account.json     
+   -v /path/to/your/service_account.json:/app/service_account.json     
+   ghcr.io/babak01/secured-babak-rag-app:latest
 ```
 
 ### On Windows PowerShell
@@ -61,7 +64,7 @@ Use the following command with backticks (`) for line continuation:
 docker run -p 8501:8501 `
     -e GOOGLE_APPLICATION_CREDENTIALS=/app/service_account.json `
     -v C:\path	o\your\service_account.json:/app/service_account.json `
-    ghcr.io/babak01/vertex-ai-llm-comparator-docker:latest
+    ghcr.io/babak01/secured-babak-rag-app:latest
 ```
 
 ### Command Explanation:
