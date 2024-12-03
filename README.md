@@ -3,9 +3,9 @@
 
 ## Disclosure
 
-*While this web app is free to use, it relies on Google Cloud services, which may **incur costs based on your usage**. Please review the [Google Cloud Pricing](https://cloud.google.com/pricing) to understand potential charges.
+***While this web app is free to use, it relies on Google Cloud services, which may incur costs based on your usage. Please review the [Google Cloud Pricing](https://cloud.google.com/pricing) to understand potential charges.***
 
-This repository provides a Dockerized version of the "Secured Babak RAG App," enabling users to run the pre-built Docker image directly without the need for rebuilding.*
+This repository provides a Dockerized version of the "Secured Babak RAG App," enabling users to run the pre-built Docker image directly without the need for rebuilding.
 
 ## Features
 
