@@ -1,6 +1,10 @@
 
 # Retrieval-Augmented Generation (RAG) Web App
 
+## Disclosure
+
+While this web app is free to use, it relies on Google Cloud services, which may incur costs based on your usage. Please review the [Google Cloud Pricing](https://cloud.google.com/pricing) to understand potential charges.
+
 This repository provides a Dockerized version of the "Secured Babak RAG App," enabling users to run the pre-built Docker image directly without the need for rebuilding.
 
 ## Features
@@ -50,10 +54,7 @@ Ensure you have the Google Cloud service account key file (.json format) that yo
 Run the Docker container using the following command, replacing `/path/to/your/service_account.json` with the actual path to your credentials file:
 
 ```bash
-docker run -p 8501:8501     
-   -e GOOGLE_APPLICATION_CREDENTIALS=/app/service_account.json     
-   -v /path/to/your/service_account.json:/app/service_account.json     
-   ghcr.io/babak01/secured-babak-rag-app:latest
+docker run -p 8501:8501    -e GOOGLE_APPLICATION_CREDENTIALS=/app/service_account.json    -v /path/to/your/service_account.json:/app/service_account.json    ghcr.io/babak01/secured-babak-rag-app:latest
 ```
 
 ### On Windows PowerShell
@@ -115,5 +116,3 @@ For more information on licensing or usage, please see the LICENSE file included
 For questions or feedback, please contact [babak01](https://github.com/babak01).
 
 ---
-
-
