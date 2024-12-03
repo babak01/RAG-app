@@ -7,6 +7,12 @@
 
 This repository provides a Dockerized version of the "Secured Babak RAG App," enabling users to run the pre-built Docker image directly without the need for rebuilding.
 
+## Demo
+
+Here is a quick demo of the app in action:
+
+![App Demo](demo.gif)
+
 ## Features
 
 - **Pre-built Docker Image**: Easily pull the image from GitHub Container Registry (GHCR) without building it yourself.
